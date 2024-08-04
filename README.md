@@ -11,5 +11,5 @@ https://30days-tmp.streamlit.app/
 ## 実行例
 
 ```bash 
-streamlit run src/02_streamlit_app.py
+streamlit run ans/02_streamlit_app.py
 ```
