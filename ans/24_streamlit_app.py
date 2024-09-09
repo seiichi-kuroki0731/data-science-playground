@@ -3,7 +3,9 @@ import numpy as np
 import pandas as pd
 from time import time
 
-st.title("st.cache_data、初回は遅いがリロードすると2回目以降はcacheを利用したほうが速い")
+st.title(
+    "st.cache_data、初回は遅いがリロードすると2回目以降はcacheを利用したほうが速い"
+)
 
 # Using cache
 # st.subheader("Using st.cache")
@@ -14,7 +16,7 @@ st.subheader("Using st.cache_data")
 
 @st.cache_data
 def load_data_a():
-    df = pd.DataFrame(np.random.rand(2000000, 5), columns=["a", "b", "c", "d", "e"])
+    df = pd.DataFrame(np.random.rand(1000000, 5), columns=["a", "b", "c", "d", "e"])
     return df
 
 
@@ -29,7 +31,7 @@ st.subheader("Not using st.cache_data")
 
 
 def load_data_b():
-    df = pd.DataFrame(np.random.rand(2000000, 5), columns=["a", "b", "c", "d", "e"])
+    df = pd.DataFrame(np.random.rand(1000000, 5), columns=["a", "b", "c", "d", "e"])
     return df
 
 
